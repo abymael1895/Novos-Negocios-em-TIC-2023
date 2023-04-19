@@ -1,0 +1,304 @@
+private val Int.size: Any
+    get() {}
+
+fun main(){
+
+//      Loop While    //
+
+//      1)       //
+
+var i = 1
+
+while (i < 11) {
+    println(i)
+    i++
+}
+
+//      2)     //
+
+var x = 10
+
+while (x > 0) {
+    if (x % 2 == 0) {
+        x--
+    } else {
+        println(x)
+        x--
+    }
+}
+
+//      3)      //
+
+var y = 0
+
+while (y < 21) {
+    if (y % 2 == 1) {
+        y++
+    } else {
+        println(y)
+        y++
+    }
+}
+
+//      Loop Do-While       //
+
+//      1)      //
+
+var n = 1
+
+do {
+
+    println(n)
+
+    n++
+
+} while (n < 11)
+}
+
+
+//      2)      //
+
+var num: Int
+
+println("Digite um número: ")
+num = readln().toInt()
+
+do {
+println(num)
+num++
+} while (num == -)
+}
+//      3)      //
+
+var numSorteado: Int
+
+do {
+    println("Digite um número de 1 a 10 para ser sorteado: ")
+    numSorteado = readln().toInt()
+    num++
+} while (numSorteado == 8)
+}
+
+//      loop For       //
+//      1)      //
+
+var Nums: Int
+
+for(Nums in 1 .. 10){
+println(Nums)
+}
+
+//      2)      //
+var NumsPares: Int
+
+for(NumsPares 1 .. 20){
+if (NumsPares % 2 == 1) {
+    NumsPares++
+} else {
+    println(NumsPares)
+    NumsPares++
+}
+
+//      3)      //
+
+    var NumsImpares: Int
+
+    for (NumsImpares 10 .. 0)run run {
+        if (NumsImpares % 1 == 10) {
+            NumsImpares++
+        } else {
+            println(NumsImpares)
+            NumsImpares++
+        }
+
+//      Range       //
+
+//      1       //
+
+        var range: Int
+        for (range in 1..10) {
+            println(range)
+        }
+
+//      2       //
+
+        var range2: Int
+        for (range2 in 'a'..'z') {
+            println(range2)
+        }
+
+//      3       //
+
+        var range3: Int
+
+        for (range3 in 1..100) {
+            if (range3 % 2 == 1) {
+                range3++
+            } else {
+                println(range3)
+                range3++
+            }
+        }
+        //     Continue, Break & Repeat        //
+
+        var cont = 0
+
+        while (cont < 10) {
+            if (cont == 5) {
+                cont++
+                continue
+            }
+            println(cont)
+            cont++
+        }
+
+        //      2       //
+
+        var bre = 0
+
+        while (bre < 10) {
+            if (cont == 4) {
+                break
+            }
+            println(bre)
+            bre++
+        }
+
+        //      Strings     //
+
+        //      1       //
+
+        var string: String
+
+        println("Entre com uma frase: ")
+        string = readln().toString()
+
+        println(string.length)
+
+        //      2       //
+        var inverso: String
+
+        println("Entre com uma frase ")
+        inverso = readln().toString()
+
+        println("A sua frase invertida: " + inverso.reversed())
+
+        //      Array       //
+
+        //      1       //
+
+        var num = arrayListOf<>(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+
+        println(num.size)
+
+//      lista Imutável
+
+        var genericlist = listOf("Azul", 10, 1.5f, "a", true)
+        println("Imprimindo$genericlist")
+        println("Numero de elementos genericlist: ${genericlist.size}")
+        println(genericlist.lastIndex)
+        println(genericlist.get(2))
+
+
+        var specificlist = listOf<String>("Azul", "Amarelo", "Verde")
+        println("Imprimindo$specificlist")
+
+        for (i in specificlist) {
+            println(i)
+        }
+
+        // Lista Mutável
+
+        var genericlist = listOf("Azul", 10, 1.5f, "a", true)
+        println("Imprimindo$genericlist")
+        println("Numero de elementos genericlist: ${genericlist.size}")
+        println(genericlist.lastIndex)
+        println(genericlist.get(2))
+        genericlist.add()
+        genericlist.remove()
+        genericlist.clear()
+
+        //      Mapas
+
+        val generalMap = mapOf("Rank" to 1, 1 to "Primeiro", "A" to "Execelente")
+        val specificMap = mapOf<String, Int>("Física" to 80, "Matemática" to 97, "C++" to 89, "Química" to 80)
+        specificMap.("Fisíca", 95)
+        println(specificMap)
+        specificMap.["Inglês"] = 100
+        println(specificMap)
+        specificMap.< String, Int>replace("Física")
+        println(specificMap)
+        specificMap.< String, Int>clear()
+        println(specificMap)
+
+
+        //      Conjuntos
+
+        val genericSet = setOf("Hello", 1, "Bye", "Hello", "A", "Hello")
+        println("conjunto original: $genericSet")
+        println("Número de elementos ${genericSet.size}")
+        println(genericSet.contains("Hello"))
+        // println(genericSet.) // First, isEmpyt, max, min, average...
+        println(genericSet.add(12.3))
+        println("Conjunto modificado: $genericSet")
+        println("Número de elementos: ${genericSet.size}")
+
+
+// Null safety (Segurança nula)
+
+
+// ##   Null com While  ##
+
+        println("Contador de letras")
+
+        println("Digite seu nome ")
+        var nome: String? = readln()
+
+        while (nome.isNullOrEmpty()) {
+            println("Digite seu nome ")
+            nome = readln()
+        }
+
+        // ##   Null com if else    ##
+
+
+        if (!nome.isNullOrEmpty()) {
+            println("Seu nome possui ${nome.length} letras")
+        } else {
+            println("Você não digitou seu nome")
+        }
+
+        // ##   Null com chamada segura   ##
+
+
+        var nome: String? = null
+        println("Seu nome possui ${nome?.length} letras")
+
+
+        // ##   Null com operador ELVIS     ##
+
+        var name: String? = "Kotlin"
+
+        println("O tamanho da string é: ${name?.length ?: -1}")
+        name = null
+        println("O tamanho da string é: ${name?.length ?: "0"}")
+
+
+        // ##   Null com operador !!    ##
+
+        var name = readln()
+
+        println("O nome da string é ${name!!.length}")
+        name = null
+        println("O tamanho da string é ${name!!.length}")
+
+        var n1: String? = null
+        while (n1 == null)
+            println("digite o primerio numero: ")
+        var n1 = readln()!!.toDouble()
+
+        println("digite o primerio numero: ")
+        var n2 = readln()!!.toDouble()
+
+        println("O resultado ${n1 + n2}")
+    }
